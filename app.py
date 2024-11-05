@@ -71,9 +71,9 @@ def populate_gold(engine):
 def entrypoint():
     try:
         logger.info("Starting data pipeline")
-        populate_bronze(ENGINE)
-        populate_silver(ENGINE)
-        populate_gold(ENGINE)
+        populate_bronze(engine=ENGINE)
+        populate_silver(engine=ENGINE)
+        populate_gold(engine=ENGINE)
         logger.info("Pipeline completed successfully")
     except Exception as e:
         logger.error(f"Pipeline failed: {str(e)}")
