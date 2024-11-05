@@ -7,11 +7,8 @@ from src.data_cleansing import remove_nulls, extract_date
 from src.data_transformation import anomaly_detection, statistics_table
 from src.schemas import bronze_schema, silver_schema, gold_schema, gold_statistics_schema
 
-# logging to console only
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+# logging to console
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 ENGINE = create_db(db_name='turbine_data.db')
