@@ -11,6 +11,7 @@ from src.schemas import bronze_schema, silver_schema, gold_schema, gold_statisti
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# creating database
 ENGINE = create_db(db_name='turbine_data.db')
 
 def populate_bronze(engine):
