@@ -11,7 +11,7 @@ turbine-task/
 │   ├── data_transformation.py    # Statistical analysis and anomaly detection
 │   └── database.py              # Database creation & operations
 ├── tests/                        # Unit tests
-├── data/                        # Sample data and data storage
+├── data/                        # Raw data location (not included in this repo)
 └── app.py                       # Project Entrypoint
 ```
 
