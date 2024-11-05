@@ -10,11 +10,10 @@ ENGINE = create_db(db_name='turbine_data.db')
 
 def bronze(engine):
 
-    # Read Raw Data
+    # Read Raw Data & Load to Bronze table
     raw_df = concat_files(filepath='./data')
-
-    # Load to Bronze table
     load_to_db(df=raw_df, engine=engine, table_name='bronze_turbines', schema=bronze_schema)
+    
     return
 
 def silver(engine):
@@ -28,6 +27,7 @@ def silver(engine):
 
     # Load to Silver Table
     load_to_db(df=bronze_df_rn, engine=engine, table_name='silver_turbines', schema=silver_schema)
+    
     return
 
 def gold(engine):
@@ -42,6 +42,7 @@ def gold(engine):
     # Apply Statistic Calculation & Write to Gold Table
     statistics_df = statistics_table(engine=engine, table_name='silver_turbines')
     load_to_db(df=statistics_df, engine=engine, table_name='gold_turbines_summary', schema=gold_statistics_schema)
+    
     return
 
 
