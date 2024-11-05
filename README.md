@@ -9,7 +9,8 @@ turbine-task/
 │   ├── data_ingestion.py        # Data ingestion
 │   ├── data_cleansing.py        # Data cleansing & preprocessing
 │   ├── data_transformation.py   # Statistical analysis and anomaly detection
-│   └── database.py              # Database creation & operations
+│   ├── database.py              # Database creation & operations
+│   └── schemas.py               # Schemas which are enforced upon loading to db
 ├── tests/                       # Unit tests
 ├── data/                        # Raw data location (not included in this repo)
 └── pipeline.py                  # Project Entrypoint, contains end-to-end data pipeline
