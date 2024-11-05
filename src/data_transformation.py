@@ -50,7 +50,7 @@ def anomaly_detection(df: pd.DataFrame):
     df['avg_power_output'] = round(grouped.transform('mean'),2)
     df['stddev_power_output'] = round(grouped.transform('std'),2)
 
-    # Check if each power_output is within 2 standard deviations of the mean
+    # Check if each power_output is outside of 2 standard deviations of the mean
     df['anomaly'] = df.apply(
         lambda x: abs(x['power_output'] - x['avg_power_output']) > 2 * x['stddev_power_output'], axis=1
         )
