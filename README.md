@@ -12,7 +12,7 @@ turbine-task/
 │   └── database.py              # Database creation & operations
 ├── tests/                       # Unit tests
 ├── data/                        # Raw data location (not included in this repo)
-└── app.py                       # Project Entrypoint
+└── app.py                       # Project Entrypoint, contains end-to-end data pipeline
 ```
 
 # Design Decisions
@@ -21,4 +21,5 @@ turbine-task/
 - Null values will be dropped rather than computed.
 - Tables will be overwritten rather than appended to.
 - Pytest to be used as the testing suite.
+- Logging and exception handling implemented on pipeline code.
 
