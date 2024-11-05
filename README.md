@@ -1,6 +1,6 @@
 # Wind Turbine Data Processing Pipeline
 
-This project implements a data pipeline for an energy company's wind farm. The pipeline uses a medallion architecture to process the data, (Bronze -> Silver -> Gold & Gold_summary). It's built to handle null values, detect anomalies in power output, and provide statistical analysis of power output. 
+This project implements a data pipeline for an energy company's wind farm. The pipeline uses a medallion architecture to process the data, (Bronze -> Silver -> Gold & Gold Summary). It's built to handle null values, detect anomalies in power output, and provide statistical analysis of power output. 
 
 # Project Structure
 ```
