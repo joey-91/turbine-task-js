@@ -8,7 +8,7 @@ from src.schemas import bronze_schema, silver_schema, gold_schema, gold_statisti
 
 ENGINE = create_db(db_name='turbine_data.db')
 
-def bronze(engine):
+def populate_bronze(engine):
 
     # Read Raw Data & Load to Bronze table
     raw_df = concat_files(filepath='./data')
@@ -16,7 +16,7 @@ def bronze(engine):
     
     return
 
-def silver(engine):
+def populate_silver(engine):
 
     # Read Bronze Data
     bronze_df = pd.read_sql('SELECT * FROM bronze_turbines', con=engine)
@@ -30,7 +30,7 @@ def silver(engine):
     
     return
 
-def gold(engine):
+def populate_gold(engine):
 
     # Read Silver Table
     silver_df = pd.read_sql('SELECT * FROM silver_turbines', con=engine)
@@ -47,9 +47,9 @@ def gold(engine):
 
 
 def entrypoint():
-    bronze(ENGINE)
-    silver(ENGINE)
-    gold(ENGINE)
+    populate_bronze(ENGINE)
+    populate_silver(ENGINE)
+    populate_gold(ENGINE)
 
 
 if __name__ == "__main__":
