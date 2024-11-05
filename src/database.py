@@ -14,6 +14,7 @@ def create_db(db_name: str):
         engine: Our SQL database instance.
     """
     engine = create_engine(f'sqlite:///{db_name}')
+    
     return engine
 
 def load_to_db(df: pd.DataFrame, engine: Engine, table_name: str, schema: Table):
