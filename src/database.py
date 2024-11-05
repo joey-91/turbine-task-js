@@ -11,7 +11,7 @@ def create_db(db_name: str):
         db_name (str): Name of database.
         
     Returns:
-        engine: A SQLAlchemy engine connected to the database.
+        engine: Our SQL database instance.
     """
     engine = create_engine(f'sqlite:///{db_name}')
     return engine
