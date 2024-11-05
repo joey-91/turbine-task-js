@@ -6,7 +6,7 @@ from src.data_transformation import statistics_table
 @pytest.fixture
 def sample_data():
     # Sample data similar to what would be in 'silver_turbines'
-    data = data = {
+    data = {
         'turbine_id': [1, 1, 2],
         'date': ['2022-03-01', '2022-03-01', '2022-03-02'],
         'power_output': [50, 55, 60]
