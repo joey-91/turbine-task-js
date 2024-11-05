@@ -12,7 +12,7 @@ turbine-task/
 │   └── database.py              # Database creation & operations
 ├── tests/                       # Unit tests
 ├── data/                        # Raw data location (not included in this repo)
-└── app.py                       # Project Entrypoint, contains end-to-end data pipeline
+└── pipeline.py                  # Project Entrypoint, contains end-to-end data pipeline
 ```
 
 # Design Decisions
