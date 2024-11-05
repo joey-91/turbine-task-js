@@ -24,3 +24,6 @@ turbine-task/
 - Pytest to be used as the testing suite.
 - Logging and exception handling implemented on pipeline code.
 
+# Testing
+- All functions used in the pipeline are tested using the pytest framework.
+
