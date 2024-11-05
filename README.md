@@ -3,7 +3,7 @@
 This project implements a data processing pipeline for a renewable energy company's wind turbine farm. The pipeline uses a medallion architecture to process the data, from Bronze -> Silver -> gold & gold_summary. It's built to handle null values, detect anomalies in power output, and provide statistical analysis of power output. 
 
 # Project Structure
-
+```
 turbine-task/
 ├── src/                          # Source code
 │   ├── data_ingestion.py        # Data ingestion
@@ -13,6 +13,7 @@ turbine-task/
 ├── tests/                        # Unit tests
 ├── data/                        # Sample data and data storage
 └── app.py                       # Project Entrypoint
+```
 
 # Design Decisions
 
