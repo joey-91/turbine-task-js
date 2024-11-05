@@ -5,14 +5,14 @@ This project implements a data processing pipeline for a renewable energy compan
 # Project Structure
 
 turbine-task/
-├── src/                # Source code
-│   ├── data_ingestion.py   # Data ingestion
-│   ├── data_cleansing.py    # Data cleansing & preprocessing
+├── src/                          # Source code
+│   ├── data_ingestion.py        # Data ingestion
+│   ├── data_cleansing.py        # Data cleansing & preprocessing
 │   ├── data_transformation.py    # Statistical analysis and anomaly detection
-│   └── database.py     # Database creation & operations
-├── tests/          # Unit tests
-├── data/           # Sample data and data storage
-└── app.py          # Project Entrypoint
+│   └── database.py              # Database creation & operations
+├── tests/                        # Unit tests
+├── data/                        # Sample data and data storage
+└── app.py                       # Project Entrypoint
 
 # Design Decisions
 
