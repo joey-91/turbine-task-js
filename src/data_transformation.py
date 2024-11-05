@@ -7,7 +7,7 @@ def statistics_table(engine: Engine, table_name: str):
     Aggregates data by turbine_id & date, taking the max, min & avg for each value
 
     Parameters:
-        df (pd.DataFrame): The DataFrame to clean.
+        table_name (str): SQL table
         engine (SQLLite engine): Our SQL database instance
 
     Returns:
